@@ -89,63 +89,76 @@ const AnimatedHero = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Background image — covers full area on mobile, maintains ratio on desktop */}
+      {/* Mobile: object-cover fills the screen, cropping sides */}
       <img
         src="/screenshots/hero.jpg"
         alt=""
         draggable={false}
-        className="absolute inset-0 w-full h-full object-cover md:object-contain md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+        className="md:hidden absolute inset-0 w-full h-full object-cover"
         style={{ imageRendering: 'pixelated' }}
       />
 
-      {/* Sprites container — only visible on md+ where positioning is accurate */}
+      {/* Desktop: original aspect-ratio container with sprites */}
       <div
-        className="hidden md:block absolute inset-0"
-        style={{ aspectRatio: `${BG_W} / ${BG_H}`, maxHeight: '100vh', margin: 'auto' }}
+        className="hidden md:flex items-center justify-center w-full h-full"
       >
-        {/* Cars */}
-        {cars.map(({ id, type, speed }) => (
-          <div
-            key={id}
-            className="absolute"
-            style={{
-              top: `${LANE_TOP}%`,
-              width: `${toPctW(type.frameW)}%`,
-              animation: `drive-right ${speed}s linear forwards`,
-            }}
-            onAnimationEnd={() => removeCar(id)}
-          >
-            <Sprite
-              src={type.src}
-              frameW={type.frameW}
-              frameH={type.frameH}
-              frames={type.frames}
-              duration={type.frames * 0.1}
-            />
-          </div>
-        ))}
+        <div
+          className="relative w-full"
+          style={{ aspectRatio: `${BG_W} / ${BG_H}`, maxHeight: '100vh' }}
+        >
+          {/* Background */}
+          <img
+            src="/screenshots/hero.jpg"
+            alt=""
+            draggable={false}
+            className="absolute inset-0 w-full h-full"
+            style={{ imageRendering: 'pixelated' }}
+          />
 
-        {/* Static props */}
-        {PROPS.map(p => (
-          <div
-            key={p.id}
-            className="absolute"
-            style={{
-              left: `${p.left}%`,
-              top: `${p.top}%`,
-              width: `${toPctW(p.frameW)}%`,
-            }}
-          >
-            <Sprite
-              src={p.src}
-              frameW={p.frameW}
-              frameH={p.frameH}
-              frames={p.frames}
-              duration={p.duration}
-              anim={p.anim}
-            />
-          </div>
-        ))}
+          {/* Cars */}
+          {cars.map(({ id, type, speed }) => (
+            <div
+              key={id}
+              className="absolute"
+              style={{
+                top: `${LANE_TOP}%`,
+                width: `${toPctW(type.frameW)}%`,
+                animation: `drive-right ${speed}s linear forwards`,
+              }}
+              onAnimationEnd={() => removeCar(id)}
+            >
+              <Sprite
+                src={type.src}
+                frameW={type.frameW}
+                frameH={type.frameH}
+                frames={type.frames}
+                duration={type.frames * 0.1}
+              />
+            </div>
+          ))}
+
+          {/* Static props */}
+          {PROPS.map(p => (
+            <div
+              key={p.id}
+              className="absolute"
+              style={{
+                left: `${p.left}%`,
+                top: `${p.top}%`,
+                width: `${toPctW(p.frameW)}%`,
+              }}
+            >
+              <Sprite
+                src={p.src}
+                frameW={p.frameW}
+                frameH={p.frameH}
+                frames={p.frames}
+                duration={p.duration}
+                anim={p.anim}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
