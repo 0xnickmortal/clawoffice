@@ -48,11 +48,19 @@ body {
 /* ===== Stardew-style pixel box ===== */
 .sv-box {
   background-color: var(--color-sv-panel);
-  border: 4px solid var(--color-sv-wood);
+  border: 3px solid var(--color-sv-wood);
   border-radius: 4px;
   box-shadow:
     inset 0 0 0 2px var(--color-sv-panel-dark),
-    4px 4px 0 rgba(0, 0, 0, 0.15);
+    3px 3px 0 rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 640px) {
+  .sv-box {
+    border-width: 4px;
+    box-shadow:
+      inset 0 0 0 2px var(--color-sv-panel-dark),
+      4px 4px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 
 .sv-box-dark {
@@ -67,8 +75,8 @@ body {
 /* Stardew button */
 .sv-btn {
   font-family: var(--font-pixel);
-  font-size: 11px;
-  padding: 14px 28px;
+  font-size: 10px;
+  padding: 12px 20px;
   background-color: var(--color-sv-orange);
   color: white;
   border: 3px solid #b85c10;
@@ -77,6 +85,13 @@ body {
   text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
   box-shadow: 0 4px 0 #8a4508, 0 6px 8px rgba(0,0,0,0.15);
   transition: all 0.1s;
+  min-height: 44px;
+}
+@media (min-width: 640px) {
+  .sv-btn {
+    font-size: 11px;
+    padding: 14px 28px;
+  }
 }
 .sv-btn:hover {
   transform: translateY(-2px);

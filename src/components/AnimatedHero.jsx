@@ -88,20 +88,21 @@ const AnimatedHero = () => {
   }, [spawnCar])
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-      <div
-        className="relative w-full"
-        style={{ aspectRatio: `${BG_W} / ${BG_H}`, maxHeight: '100vh' }}
-      >
-        {/* Background */}
-        <img
-          src="/screenshots/hero.jpg"
-          alt=""
-          draggable={false}
-          className="absolute inset-0 w-full h-full"
-          style={{ imageRendering: 'pixelated' }}
-        />
+    <div className="absolute inset-0 overflow-hidden">
+      {/* Background image — covers full area on mobile, maintains ratio on desktop */}
+      <img
+        src="/screenshots/hero.jpg"
+        alt=""
+        draggable={false}
+        className="absolute inset-0 w-full h-full object-cover md:object-contain md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+        style={{ imageRendering: 'pixelated' }}
+      />
 
+      {/* Sprites container — only visible on md+ where positioning is accurate */}
+      <div
+        className="hidden md:block absolute inset-0"
+        style={{ aspectRatio: `${BG_W} / ${BG_H}`, maxHeight: '100vh', margin: 'auto' }}
+      >
         {/* Cars */}
         {cars.map(({ id, type, speed }) => (
           <div

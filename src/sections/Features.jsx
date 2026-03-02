@@ -39,30 +39,30 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="min-h-screen flex items-center py-24 px-6 bg-sv-panel">
+    <div className="min-h-screen flex items-center py-16 sm:py-24 px-4 sm:px-6 bg-sv-panel">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="inline-block mb-4">
             <span className="font-[var(--font-pixel)] text-[10px] text-sv-wood tracking-widest uppercase">&#9670; Features &#9670;</span>
           </div>
-          <h2 className="font-[var(--font-pixel)] text-lg md:text-xl text-sv-brown mb-4 leading-relaxed">
+          <h2 className="font-[var(--font-pixel)] text-sm sm:text-lg md:text-xl text-sv-brown mb-4 leading-relaxed">
             Everything You Need
           </h2>
-          <p className="text-sv-text-light max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-sv-text-light max-w-xl mx-auto">
             Build your dream AI team with tools that actually make it fun.
           </p>
         </div>
 
         {/* Feature grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {features.map((f, i) => (
             <div
               key={i}
-              className="sv-box p-6 hover:-translate-y-1 transition-transform duration-200"
+              className="sv-box p-5 sm:p-6 hover:-translate-y-1 transition-transform duration-200"
             >
-              <span className="text-4xl block mb-4">{f.icon}</span>
-              <h3 className="font-[var(--font-pixel)] text-[10px] text-sv-brown mb-3 leading-relaxed">{f.title}</h3>
+              <span className="text-3xl sm:text-4xl block mb-3 sm:mb-4">{f.icon}</span>
+              <h3 className="font-[var(--font-pixel)] text-[10px] sm:text-xs text-sv-brown mb-2 sm:mb-3 leading-relaxed">{f.title}</h3>
               <p className="text-sm text-sv-text-light leading-relaxed">{f.desc}</p>
             </div>
           ))}

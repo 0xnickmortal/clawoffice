@@ -30,15 +30,15 @@ const Waitlist = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center py-24 px-6 bg-sv-panel-dark">
-      <div className="max-w-xl mx-auto">
-        <div className="sv-box p-8 md:p-10">
+    <div className="min-h-screen flex items-center py-16 sm:py-24 px-4 sm:px-6 bg-sv-panel-dark">
+      <div className="max-w-xl mx-auto w-full">
+        <div className="sv-box p-6 sm:p-8 md:p-10">
           <div className="text-center">
-            <span className="text-5xl block mb-4">📬</span>
-            <h2 className="font-[var(--font-pixel)] text-base md:text-lg text-sv-brown mb-3 leading-relaxed">
+            <span className="text-4xl sm:text-5xl block mb-4">📬</span>
+            <h2 className="font-[var(--font-pixel)] text-xs sm:text-base md:text-lg text-sv-brown mb-3 leading-relaxed">
               Get Early Access
             </h2>
-            <p className="text-sv-text-light mb-8">
+            <p className="text-sm sm:text-base text-sv-text-light mb-6 sm:mb-8">
               Be the first to build your AI office. We'll notify you when we launch.
             </p>
           </div>
