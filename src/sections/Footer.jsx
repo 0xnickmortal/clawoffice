@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
         <div className="flex items-center gap-3">
           <span className="text-xl">🏢</span>
-          <span className="font-[var(--font-pixel)] text-[10px] sm:text-xs text-sv-gold">ClawdOffice</span>
+          <span className="font-[var(--font-pixel)] text-[10px] sm:text-xs text-sv-gold">Open Office</span>
         </div>
 
         <div className="flex items-center gap-4 sm:gap-6 text-sm">
@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         <p className="text-[10px] text-sv-panel/40 font-[var(--font-pixel)]">
-          &copy; {new Date().getFullYear()} ClawdOffice
+          &copy; {new Date().getFullYear()} Open Office
         </p>
       </div>
     </footer>

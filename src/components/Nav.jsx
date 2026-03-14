@@ -19,7 +19,7 @@ const Nav = () => {
         <a href="#hero" className="flex items-center gap-3">
           <span className="text-2xl">🏢</span>
           <span className="font-[var(--font-pixel)] text-xs text-sv-gold drop-shadow-[1px_1px_0_rgba(0,0,0,0.6)]">
-            ClawdOffice
+            Open Office
           </span>
         </a>
 
@@ -27,6 +27,7 @@ const Nav = () => {
           <a href="#features" className="text-white/80 hover:text-sv-gold transition-colors drop-shadow-[1px_1px_0_rgba(0,0,0,0.4)]">Features</a>
           <a href="#how-it-works" className="text-white/80 hover:text-sv-gold transition-colors drop-shadow-[1px_1px_0_rgba(0,0,0,0.4)]">How It Works</a>
           <a href="#pricing" className="text-white/80 hover:text-sv-gold transition-colors drop-shadow-[1px_1px_0_rgba(0,0,0,0.4)]">Pricing</a>
+          <a href="/marketplace" className="text-white/80 hover:text-sv-gold transition-colors drop-shadow-[1px_1px_0_rgba(0,0,0,0.4)]">Marketplace</a>
           <a href="#waitlist" className="sv-btn !text-[10px] !py-2 !px-4 !shadow-none !border-2">
             Join Waitlist
           </a>
