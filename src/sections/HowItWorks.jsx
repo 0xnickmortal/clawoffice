@@ -1,46 +1,48 @@
 import ScrollReveal from '../components/ScrollReveal'
 
+const BLOB_BASE = 'https://qi4c9kvcmytz7knp.private.blob.vercel-storage.com'
+
 const sections = [
   {
     icon: '🖱️',
     title: 'Deploy Agents in Clicks',
     desc: 'Hire up to 12 agents — each runs its own independent AI gateway. Pick a role, choose a model, and they show up at their desk ready to work.',
-    video: '/videos/deploy-agents.mp4',
+    video: `${BLOB_BASE}/deploy-agents.mp4`,
     reverse: false,
   },
   {
     icon: '⚡',
     title: 'Parallel Multi-Tasking',
     desc: 'Multiple agents work on different projects simultaneously. A frontend dev builds your UI while a backend dev wires up the API — all at the same time.',
-    video: '/videos/parallel-work.mp4',
+    video: `${BLOB_BASE}/parallel-work.mp4`,
     reverse: true,
   },
   {
     icon: '📋',
     title: 'PM Agent Orchestration',
     desc: 'The Project Manager doesn\'t just track tasks — it hires devs, breaks down complex goals, delegates work, and collects results automatically.',
-    video: '/videos/pm-agent.mp4',
+    video: `${BLOB_BASE}/pm-agent.mp4`,
     reverse: false,
   },
   {
     icon: '🔄',
     title: 'Hot-Swap LLM Models',
     desc: 'Switch between Claude, GPT, Gemini, DeepSeek and more mid-conversation. No context lost, no restart needed.',
-    video: '/videos/model-switch.mp4',
+    video: `${BLOB_BASE}/model-switch.mp4`,
     reverse: true,
   },
   {
     icon: '🧠',
     title: 'Memory Transfer',
     desc: 'Fire an agent and their knowledge stays. Transfer work memory to a new hire so they pick up right where the last one left off.',
-    video: '/videos/memory-transfer.mp4',
+    video: `${BLOB_BASE}/memory-transfer.mp4`,
     reverse: false,
   },
   {
     icon: '🎮',
     title: 'Discord Integration',
     desc: '@mention any agent in Discord to assign tasks directly. Manage your AI team the same way you\'d manage real employees in a company channel.',
-    video: '/videos/discord.mp4',
+    video: `${BLOB_BASE}/discord.mp4`,
     reverse: true,
   },
 ]
