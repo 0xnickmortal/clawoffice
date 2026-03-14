@@ -1,6 +1,6 @@
 import ScrollReveal from '../components/ScrollReveal'
 
-const BLOB_BASE = 'https://qi4c9kvcmytz7knp.private.blob.vercel-storage.com'
+const BLOB_BASE = 'https://tmrogv2sbt3kmiyn.public.blob.vercel-storage.com'
 
 const sections = [
   {
