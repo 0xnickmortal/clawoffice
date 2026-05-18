@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PixelIcon from './PixelIcon'
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -16,8 +17,10 @@ const Nav = () => {
         : 'bg-black/30 backdrop-blur-sm'
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-3">
-          <span className="text-2xl">🏢</span>
+        <a href="#hero" className="flex items-center gap-3 group">
+          <span className="text-sv-gold transition-transform duration-200 group-hover:-translate-y-0.5 drop-shadow-[1px_1px_0_rgba(0,0,0,0.6)]">
+            <PixelIcon name="logo" size={24} />
+          </span>
           <span className="font-[var(--font-pixel)] text-xs text-sv-gold drop-shadow-[1px_1px_0_rgba(0,0,0,0.6)]">
             Open Office
           </span>

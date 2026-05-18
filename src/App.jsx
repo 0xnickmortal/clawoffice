@@ -35,7 +35,7 @@ function App() {
 
       <section id="how-it-works">
         {howItWorksSections.map((section, i) => (
-          <HowItWorksSection key={i} section={section} />
+          <HowItWorksSection key={i} section={section} index={i} />
         ))}
       </section>
 
