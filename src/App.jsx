@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Hero from './sections/Hero'
 import Features from './sections/Features'
 import { HowItWorksSection, sections as howItWorksSections } from './sections/HowItWorks'
@@ -14,10 +15,30 @@ function App() {
 
   // Marketplace pages
   if (path.startsWith('/marketplace')) {
-    if (path === '/marketplace/create') return <CreateListingPage />
-    if (path.startsWith('/marketplace/listing/')) return <ListingDetailPage />
-    if (path === '/marketplace/my') return <MyListingsPage />
-    return <BrowsePage />
+    if (path === '/marketplace/create') return (
+      <>
+        <CreateListingPage />
+        <Analytics />
+      </>
+    )
+    if (path.startsWith('/marketplace/listing/')) return (
+      <>
+        <ListingDetailPage />
+        <Analytics />
+      </>
+    )
+    if (path === '/marketplace/my') return (
+      <>
+        <MyListingsPage />
+        <Analytics />
+      </>
+    )
+    return (
+      <>
+        <BrowsePage />
+        <Analytics />
+      </>
+    )
   }
 
   // Landing page
@@ -48,6 +69,8 @@ function App() {
       <div className="snap-start">
         <Footer />
       </div>
+
+      <Analytics />
     </div>
   )
 }
